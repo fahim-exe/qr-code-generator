@@ -9,7 +9,7 @@ class QR_Gen:
 
         try:
             self.qrcode.add_data(user_input)
-            qr_image = self.qr.make_image(fill_color=fg, back_color=bg)
+            qr_image = self.qrcode.make_image(fill_color=fg, back_color=bg)
             qr_image.save(f_name)
             print(f"Successfull created ({f_name})")
 
@@ -19,10 +19,10 @@ class QR_Gen:
 
 
 def main():
-    qr = QR_Gen(size=30, padding=2)
-    qr.creat_qr("sample.png", 
-                fg='black', 
-                bg='white')
+    myqr = QR_Gen(size=30, padding=2)
+    myqr.creat_qr("sample.png", 
+                fg='green', 
+                bg='pink')
 
 
 if __name__=="__main__":
